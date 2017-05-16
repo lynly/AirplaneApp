@@ -24,7 +24,3 @@ Things you may want to cover:
 * ...
 
 <!-- James Test -->
-
-<!-- Lynda Test -->
-
-<!-- luke Test  -->
