@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'session/new'
+
+  get 'session/create'
+
+  get 'session/destroy'
+
   get '/search' => 'pages#search'
 
   root 'pages#search'
