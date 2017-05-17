@@ -72,6 +72,13 @@ puts "Flight Count: #{Flight.all.count}"
 # User Seed Data
 User.destroy_all
 
+
+# u1 = User.create(name: "Bill", email: "bill@ga.co", password: "chicken", password_confirmation: "chicken")
+
+# p u1.password_digest
+
+
+
 user1 = User.create({
   first_name: "John",
   last_name: "Smith",
