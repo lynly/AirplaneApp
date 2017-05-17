@@ -1,3 +1,13 @@
+<div>
+  <h1>Book A Flight</h1>
+  <%= form_tag(flights_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :origin, params[:search], placeholder: "From" %>
+    <%= text_field_tag :destination, params[:search], placeholder: "To" %>
+    <%= date_field_tag :departure_date, params[:search], placeholder: "Depart" %>
+    <%= submit_tag "Search", :name => nil %>
+  <% end %>
+</div>
+
 <div id="app">
   <h1>
     Backbone should be displayed here
@@ -5,5 +15,5 @@
 </div>
 
 <script type="html/template" id="AppViewTemplate">
-  <p>An instance of the flightinputview should go here</p>
+    <p>An instance of the flightinputview should go here</p>
 </script>
