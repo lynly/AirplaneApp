@@ -2,7 +2,7 @@ var app = app || {};
 
 app.AppRouter = Backbone.Router.extend({
   routes: {
-    '' :  'initializeSearch'
+    "":  'initializeSearch'
   },
 
   initializeSearch: function () {
