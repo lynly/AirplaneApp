@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
+<h4>Airplane: <%= @airplane.name %></h4>
 
-<p>
-  <strong>Name:</strong>
-  <%= @airplane.name %>
-</p>
+<div class="collection">
 
-<p>
-  <strong>Rows:</strong>
-  <%= @airplane.rows %>
-</p>
+  <p class="collection-item">
+    <strong>Rows:</strong>
+    <%= @airplane.rows %>
+  </p>
 
-<p>
-  <strong>Columns:</strong>
-  <%= @airplane.columns %>
-</p>
+  <p class="collection-item">
+    <strong>Columns:</strong>
+    <%= @airplane.columns %>
+  </p>
+</div>
 
-<%= link_to 'Edit', edit_airplane_path(@airplane) %> |
-<%= link_to 'Back', airplanes_path %>
+<button class="btn waves-effect waves-light" type="submit" name="action"><%= link_to 'Edit', edit_airplane_path(@airplane) %></button>
+
+<button class="btn waves-effect waves-light" type="submit" name="action"><%= link_to 'Back', airplanes_path %></button>

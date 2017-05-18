@@ -1,24 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+<h1>User Profile</h1>
+  <div class="collection">
+    <p class="collection-item">
+      <strong>First name:</strong>
+      <%= @user.first_name %>
+    </p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+    <p class="collection-item">
+      <strong>Last name:</strong>
+      <%= @user.last_name %>
+    </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+    <p class="collection-item">
+      <strong>Email:</strong>
+      <%= @user.email %>
+    </p>
 
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
+  </div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+  <button class="btn waves-effect waves-light" type="submit" name="action"><%= link_to 'Edit', edit_user_path(@user) %></button>
+  <button class="btn waves-effect waves-light" type="submit" name="action"><%= link_to 'Back', users_path %></button>
