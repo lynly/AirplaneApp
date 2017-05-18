@@ -9,6 +9,15 @@
 </script>
 
 <script type="html/template" id="SearchViewTemplate">
+<<<<<<< HEAD
+=======
+
+  <input type="text" id="origin" placeholder="From" />
+  <input type="text" id="destination" placeholder="To" />
+  <button>Search</button>
+
+  <!--
+>>>>>>> aa851d18766659b3a1867bde9e2b541aecc12043
   <%= form_for '/search' do |f| %>
     <div class="field">
       <%= f.label :origin %>
@@ -24,4 +33,19 @@
       <%= submit_tag "Search", :name => nil, :class => "findFlight" %>
     </div>
   <% end %>
+<<<<<<< HEAD
+=======
+  -->
+
+
+</script>
+
+<script type="html/template" id="FlightListViewTemplate">
+  <p>
+    This will display a list of the flights
+  </p>
+  <ul id="flights">
+
+  </ul>
+>>>>>>> aa851d18766659b3a1867bde9e2b541aecc12043
 </script>
