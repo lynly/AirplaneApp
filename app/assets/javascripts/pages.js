@@ -1,8 +1,14 @@
 var app = app || {};
 
+app.router = new app.AppRouter();
+
 $(document).ready(function () {
-  app.router = new app.AppRouter();
-  Backbone.history.start();
+
+  app.flights = new app.Flights();
+  app.flights.fetch().done(function () {
+    Backbone.history.start();
+  });
+
   console.log("The page has loaded - pages.js");
 
   $('.findFlight').on("click", function( event ){
@@ -23,5 +29,5 @@ $(document).ready(function () {
 
     // If there's a result => render
   });
-  
+
 });

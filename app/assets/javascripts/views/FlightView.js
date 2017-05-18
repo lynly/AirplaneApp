@@ -1,16 +1,24 @@
 var app = app || {};
 
-// Create a new list item
-// Set the text to be the content of the model that was provided
-// Prepend it to #secrets
-
 app.FlightView = Backbone.View.extend({
   tagName: "li",
 
-  render: function () {
-    var flightName = Flight.model.get("flight_number");
-    this.$el.html(flightName);
-    this.$el.prependTo("#app");
-  }
+  events: {
+    'click': 'flightClicked'
+  },
 
+  flightClicked: function () {
+    console.log("A FLIGHT WAS CLICKED");
+  },
+
+  render: function () {
+    console.log( this.model.toJSON() );
+    var message = "Origin: " + this.model.get("origin");
+    message += ". Destination: " + this.model.get("destination");
+    message += ". Flight number: " + this.model.get("flight_number");
+    var flightNumber = this.model.get("flight_number");
+    this.$el.html( message );
+    // this.$el.html( JSON.stringify(this.model.toJSON()) );
+    this.$el.prependTo("#flights");
+  }
 });
