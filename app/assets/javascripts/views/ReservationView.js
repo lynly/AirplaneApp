@@ -8,7 +8,7 @@ app.ReservationView = Backbone.View.extend({
   tagName: "li",
 
   render: function () {
-    var flightName = this.model.get("flight_number");
+    var flightName = Flight.model.get("flight_number");
     this.$el.html(flightName);
     this.$el.prependTo("#app");
   }

@@ -4,7 +4,7 @@ app.Flight = Backbone.Model.extend({
   urlRoot: '/flights',
 
   defaults: {
-    flight_number: "N/A",
+    airplane_id: 13,
   },
 
   initialize: function () {

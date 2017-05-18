@@ -82,60 +82,80 @@ User.destroy_all
 user1 = User.create({
   first_name: "John",
   last_name: "Smith",
+  password: "test",
+  password_confirmation: "test",
   email: "john.smith@test.com"
   })
 
 user2 = User.create({
   first_name: "Cameron",
   last_name: "Citizen",
+  password: "test",
+  password_confirmation: "test",
   email: "cameron.citizen@test.com"
   })
 
 user3 = User.create({
   first_name: "Matthew",
   last_name: "Jones",
+  password: "test",
+  password_confirmation: "test",
   email: "matthew.jones@test.com"
   })
 
 user4 = User.create({
   first_name: "Robert",
   last_name: "Howell",
+  password: "test",
+  password_confirmation: "test",
   email: "robert.howell@test.com"
   })
 
 user5 = User.create({
   first_name: "Gary",
   last_name: "George",
+  password: "test",
+  password_confirmation: "test",
   email: "gary.george@test.com"
   })
 
 user6 = User.create({
   first_name: "Mary",
   last_name: "Stewart",
+  password: "test",
+  password_confirmation: "test",
   email: "mary.stewart@test.com"
   })
 
 user7 = User.create({
   first_name: "Myra",
   last_name: "James",
+  password: "test",
+  password_confirmation: "test",
   email: "myra.james@test.com"
   })
 
 user8 = User.create({
   first_name: "Dawn",
   last_name: "Scott",
+  password: "test",
+  password_confirmation: "test",
   email: "dawn.scott@test.com"
   })
 
 user9 = User.create({
   first_name: "Candice",
   last_name: "Bishop",
+  password: "test",
+  password_confirmation: "test",
   email: "candice.bishop@test.com"
   })
 
 user10 = User.create({
   first_name: "Catherine",
   last_name: "Pendin",
+  password: "test",
+  password_confirmation: "test",
   email: "catherine.pendin@test.com"
   })
 
