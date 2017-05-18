@@ -5,13 +5,17 @@ app.Flights = Backbone.Collection.extend({
 
   model: app.Flight,
 
-  initialize: function () {
-    this.on("add", function ( flight ) {
-      console.log("A new instance of the flight view was created");
-      var flightView = new app.FlightView({
-        model: flight
-      });
-      flightView.render();
-    });
-  }
+  initialize: function (){
+    console.log("A new collection has been created");
+
+  },
+
+});
+
+var flightsCollection = new app.Flights();
+
+flightsCollection.fetch().done(function(){
+  flightsCollection.each(function(flight){
+    console.log( flight.toJSON() );
+  });
 });
