@@ -1,9 +1,11 @@
 var app = app || {};
+var searchArray = [];
 
 app.AppView = Backbone.View.extend({
   el: "#app",
 
   events: {
+<<<<<<< HEAD
     'click button': "searchFlights"
   },
 
@@ -17,6 +19,36 @@ app.AppView = Backbone.View.extend({
     this.collection = new app.Flights(matchedFlights);
     this.render();
   },
+=======
+    'keypress :input': 'logKey'
+  },
+
+  logKey: function(e) {
+
+    console.log(e.keyCode);
+
+   var searchInput = String.fromCharCode(e.keyCode);
+   searchArray.push( searchInput );
+   console.log(searchArray);
+   var searchWord = searchArray.join("");
+   console.log(searchWord);
+
+
+
+   var matchedFlights = this.collection.filter(function (flight) {
+     return flight.get("origin").startsWith(searchWord);
+   });
+
+   this.collection = new app.Flights(matchedFlights);
+   this.render();
+
+
+  this.$("#origin").focus();
+  this.$('#origin').val('');
+  this.$("#origin").val(searchWord);
+
+ },
+>>>>>>> 1142f5c4c3698c212df8c6c25f46447b7a4f791e
 
   initialize: function () {
     console.log("A new view was created");
