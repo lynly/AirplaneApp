@@ -30,4 +30,3 @@ $(document).ready(function () {
     // If there's a result => render
   });
 
-});
