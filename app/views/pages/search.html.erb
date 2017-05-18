@@ -1,29 +1,3 @@
-<div>
-  <h1>Book a Trip</h1>
-    <%= form_for '/search' do |f| %>
-      <div class="field">
-        <%= f.label :origin %>
-        <%= f.text_field :origin, required: true, placeholder: 'From'  %>
-      </div>
-
-      <div class="field">
-        <%= f.label :destination %>
-        <%= f.text_field :destination, required: true, placeholder: 'To'  %>
-      </div>
-
-      <div class="field">
-        <%= f.label :departure_date %>
-        <%= f.date_field :departure_date %>
-      </div>
-
-      <div class="actions">
-        <%= submit_tag "Search", :name => nil, :class => "findFlight" %>
-      </div>
-    <% end %>
-</div>
-
-
-
 <div id="app">
   <h1>
     Backbone should be displayed here
@@ -35,19 +9,20 @@
 </script>
 
 <script type="html/template" id="SearchViewTemplate">
-  <input type="text"/>
-  <input type="text"/>
-</script>
 
-<script type="html/template" id="FlightListViewTemplate">
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-</script>
+  <%= form_for '/search' do |f| %>
+    <div class="field">
+      <%= f.label :origin %>
+      <%= f.text_field :origin, required: true, placeholder: 'From'  %>
+    </div>
 
-<script type="html/template" id="SeatingPlanViewTemplate">
-  // Grid
-</script>
+    <div class="field">
+      <%= f.label :destination %>
+      <%= f.text_field :destination, required: true, placeholder: 'To'  %>
+    </div>
 
-<!-- app.flights.fetch() -->
+    <div class="actions">
+      <%= submit_tag "Search", :name => nil, :class => "findFlight" %>
+    </div>
+  <% end %>
+</script>
