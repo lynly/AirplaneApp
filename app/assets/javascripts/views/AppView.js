@@ -11,8 +11,8 @@ app.AppView = Backbone.View.extend({
     var templateMarkup = $("#AppViewTemplate").html();
     this.$el.html( templateMarkup );
 
-    var ReservationInputView = new app.ReservationInputView();
-    ReservationInputView.render();
+    var FlightView = new app.FlightView();
+    FlightView.render();
   }
 
 });
