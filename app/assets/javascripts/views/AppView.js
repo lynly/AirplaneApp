@@ -8,14 +8,17 @@ app.AppView = Backbone.View.extend({
     'keypress :input': 'logKey'
   },
 
-
-
   logKey: function(e) {
+
+    console.log(e.keyCode);
+
    var searchInput = String.fromCharCode(e.keyCode);
    searchArray.push( searchInput );
    console.log(searchArray);
    var searchWord = searchArray.join("");
    console.log(searchWord);
+
+
 
    var matchedFlights = this.collection.filter(function (flight) {
      return flight.get("origin").startsWith(searchWord);
@@ -24,16 +27,10 @@ app.AppView = Backbone.View.extend({
    this.collection = new app.Flights(matchedFlights);
    this.render();
 
-   var clearVals = function() {
-     this.$("#origin").focus();
-     this.$('#origin').val('');
-     this.$("#origin").val(searchWord);
-   };
 
-   clearVals();
-  // this.$("#origin").focus();
-  // this.$('#origin').val('');
-  // this.$("#origin").val(searchWord);
+  this.$("#origin").focus();
+  this.$('#origin').val('');
+  this.$("#origin").val(searchWord);
 
  },
 
