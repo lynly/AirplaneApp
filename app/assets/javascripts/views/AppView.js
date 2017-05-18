@@ -5,32 +5,35 @@ app.AppView = Backbone.View.extend({
   el: "#app",
 
   events: {
-    'keypress :input': 'logKey'
+    'keyup input': 'logKey'
   },
 
   logKey: function(e) {
 
-    console.log(e.keyCode);
+  //   console.log(e.keyCode);
+   //
+  //  var searchInput = String.fromCharCode(e.keyCode);
+  //  searchArray.push( searchInput );
+  //  console.log(searchArray);
+  //  var searchWord = searchArray.join("");
+  //  console.log(searchWord);
 
-   var searchInput = String.fromCharCode(e.keyCode);
-   searchArray.push( searchInput );
-   console.log(searchArray);
-   var searchWord = searchArray.join("");
-   console.log(searchWord);
+  var origin = $("#origin").val();
+  var destination = $("#destination").val();
 
 
 
-   var matchedFlights = this.collection.filter(function (flight) {
-     return flight.get("origin").startsWith(searchWord);
+   var matchedFlights = app.flights.filter(function (flight) {
+     return flight.get("origin").toLowerCase().startsWith(origin) && flight.get("destination").toLowerCase().startsWith(destination);
    });
 
    this.collection = new app.Flights(matchedFlights);
    this.render();
 
 
-  this.$("#origin").focus();
-  this.$('#origin').val('');
-  this.$("#origin").val(searchWord);
+  // this.$("#origin").focus();
+  // this.$('#origin').val('');
+  // this.$("#origin").val(searchWord);
 
  },
 
@@ -39,13 +42,17 @@ app.AppView = Backbone.View.extend({
   },
 
   render: function() {
-    var templateMarkup = $("#SearchViewTemplate").html();
-    this.$el.html( templateMarkup );
+    if ( $("#origin").length === 0 ) {
+      var templateMarkup = $("#SearchViewTemplate").html();
+      this.$el.html( templateMarkup );
+    }
+
     var flightListTemplate = $("#FlightListViewTemplate").html();
     this.$el.append( flightListTemplate );
 
     // Create a new instance of flightview for every flight in this.collection
     // Render them
+    $("#flights").html('');
     this.collection.each(function (flight) {
       var fv = new app.FlightView({
         model: flight

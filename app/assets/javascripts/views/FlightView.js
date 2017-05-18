@@ -8,6 +8,8 @@ app.FlightView = Backbone.View.extend({
   },
 
   flightClicked: function () {
+    var id = this.model.get("id");
+    app.router.navigate("flights/" + id, true);
     console.log("A FLIGHT WAS CLICKED");
   },
 
