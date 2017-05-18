@@ -10,11 +10,34 @@
 
 <script type="html/template" id="SearchViewTemplate">
 
+<<<<<<< HEAD
+  <input type="text" id="origin" placeholder="From" />
+  <input type="text" id="destination" placeholder="To" />
+  <button>Search</button>
+
+  <!--
+  <%= form_for '/search' do |f| %>
+    <div class="field">
+      <%= f.label :origin %>
+      <%= f.text_field :origin, required: true, placeholder: 'From'  %>
+    </div>
+=======
+>>>>>>> 1142f5c4c3698c212df8c6c25f46447b7a4f791e
 
   <input type="text" id="origin" placeholder="From" />
   <input type="text" id="destination" placeholder="To" />
   <button>Search</button>
 
+<<<<<<< HEAD
+    <div class="actions">
+      <%= submit_tag "Search", :name => nil, :class => "findFlight" %>
+    </div>
+  <% end %>
+  -->
+
+
+=======
+>>>>>>> 1142f5c4c3698c212df8c6c25f46447b7a4f791e
 </script>
 
 <script type="html/template" id="FlightListViewTemplate">
