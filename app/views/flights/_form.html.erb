@@ -33,15 +33,13 @@
 
   <div class="field">
     <%= f.label :departure_date %>
-    <%= f.date_select :departure_date %>
+    <%= f.date_field :departure_date %>
   </div>
 
   <div class="field">
     <%= f.label :departure_time %>
-    <%= f.time_select :departure_time %>
+    <%= f.time_field :departure_time %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <button class="btn waves-effect waves-light" type="submit" name="action"><%= f.submit %></button>
 <% end %>
