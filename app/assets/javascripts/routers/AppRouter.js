@@ -7,6 +7,7 @@ app.AppRouter = Backbone.Router.extend({
   },
 
   initializeSearch: function () {
+
     // Pass all of the flights to the appview (as a collection)
     var appView = new app.AppView({
       collection: app.flights // this.collection in appView
@@ -14,8 +15,12 @@ app.AppRouter = Backbone.Router.extend({
     appView.render();
   },
 
-  showFlight: function () {
-    // Don't render the AppView
-    // Render your version of FlightDetailsView and SeatingPlanView
+  showFlight: function ( id ) {
+    console.log("this should now show the seating plan");
+    var flight = app.flights.get( id );
+    var bookView = new app.BookView({
+      model: flight
+    });
+    bookView.render();
   }
 });
