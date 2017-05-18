@@ -1,3 +1,29 @@
+<div>
+  <h1>Book a Trip</h1>
+    <%= form_for '/search' do |f| %>
+      <div class="field">
+        <%= f.label :origin %>
+        <%= f.text_field :origin, required: true, placeholder: 'From'  %>
+      </div>
+
+      <div class="field">
+        <%= f.label :destination %>
+        <%= f.text_field :destination, required: true, placeholder: 'To'  %>
+      </div>
+
+      <div class="field">
+        <%= f.label :departure_date %>
+        <%= f.date_field :departure_date %>
+      </div>
+
+      <div class="actions">
+        <%= submit_tag "Search", :name => nil, :class => "findFlight" %>
+      </div>
+    <% end %>
+</div>
+
+
+
 <div id="app">
   <h1>
     Backbone should be displayed here
