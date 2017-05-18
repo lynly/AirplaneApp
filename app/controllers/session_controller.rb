@@ -1,5 +1,5 @@
 class SessionController < ApplicationController
-  before_action :authorize_admin
+  # before_action :authorize_admin
 
   def new
   end
