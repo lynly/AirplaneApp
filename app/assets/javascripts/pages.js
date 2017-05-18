@@ -30,8 +30,12 @@ $(document).ready(function () {
     // If there's a result => render
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 
 >>>>>>> aa851d18766659b3a1867bde9e2b541aecc12043
+=======
+
+>>>>>>> 1142f5c4c3698c212df8c6c25f46447b7a4f791e
 });
