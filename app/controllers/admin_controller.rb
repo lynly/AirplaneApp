@@ -7,15 +7,16 @@ before_action :authorize_admin
 #   end
 # end
 
-def create
-  [User, Reservation, Flight, Airplane].each do |table|
-    table.create_all
+  def create
+    [User, Reservation, Flight, Airplane].each do |table|
+      table.create_all
+    end
   end
-end
 
-def destroy
-  [User, Reservation, Flight, Airplane].each do |table|
-    table.destroy_all
+  def destroy
+    [User, Reservation, Flight, Airplane].each do |table|
+      table.destroy_all
+    end
   end
 end
 
